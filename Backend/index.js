@@ -8,7 +8,7 @@ const cors = require('cors')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cors({
-    origin='https://blog-app-frontend-ozpr.onrender.com'
+    origin:'https://blog-app-frontend-ozpr.onrender.com'
 }))
 
 port=process.env.PORT
