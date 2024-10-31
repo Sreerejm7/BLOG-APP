@@ -34,7 +34,7 @@ const CreateBlog = () => {
       {
         navigate('/login')
       }
-      const response = await axios.post("http://localhost:4500/post",{ author, title, content },{  headers: {Authorization: `Bearer ${token}`,},});
+      const response = await axios.post("https://blog-app-backend-6xv2.onrender.compost",{ author, title, content },{  headers: {Authorization: `Bearer ${token}`,},});
       
       if(response)
       {

@@ -22,7 +22,7 @@ const Login = () => {
     }
     else{
       try {
-        const url = "http://localhost:4500/login"
+        const url = "https://blog-app-backend-6xv2.onrender.comlogin"
         const response = await axios.post(url,{email,password})
         if(response.data.token){
           localStorage.setItem('token',response.data.token)
