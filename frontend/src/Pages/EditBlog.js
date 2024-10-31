@@ -43,7 +43,7 @@ function EditBlog() {
     }
   
     try {
-      const response =await axios.put(`https://blog-app-backend-e23q.onrender.com//update/${id}`, blog, {
+      const response =await axios.put(`https://blog-app-backend-e23q.onrender.com/update/${id}`, blog, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       console.log(response.data); 
