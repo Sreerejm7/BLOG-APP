@@ -11,7 +11,7 @@ function MyBlogs() {
   useEffect(()=>{
     const fetchBlogs = async()=>{
       try {
-        const url = 'http://localhost:4500/getuserposts'
+        const url = 'https://blog-app-backend-6xv2.onrender.com/getuserposts'
       const response = await axios.get(url,{headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}})
       setBlogs(response.data.results)
       } catch (error) {
@@ -25,7 +25,7 @@ function MyBlogs() {
 
   const onDelete = async(id)=>{
     try {
-      const url = `http://localhost:4500/delete/${id}`
+      const url = `https://blog-app-backend-6xv2.onrender.com/delete/${id}`
        const response=await axios.delete(url,{headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}})
       setBlogs(blogs.filter((blog)=>blog._id!==id))
       handleSucess(response.data.message)
