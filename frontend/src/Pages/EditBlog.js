@@ -13,7 +13,7 @@ function EditBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`https://blog-app-backend-6xv2.onrender.com/getuserposts/${id}`, {
+        const response = await axios.get(`https://blog-app-backend-e23q.onrender.com/getuserposts/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         
@@ -43,7 +43,7 @@ function EditBlog() {
     }
   
     try {
-      const response =await axios.put(`https://blog-app-backend-6xv2.onrender.com/update/${id}`, blog, {
+      const response =await axios.put(`https://blog-app-backend-e23q.onrender.com//update/${id}`, blog, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       console.log(response.data); 
