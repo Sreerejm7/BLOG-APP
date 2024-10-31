@@ -22,7 +22,7 @@ useEffect(() => {
 
   const fetchBlogs = async()=>{
     try {
-      const url = 'https://blog-app-backend-6xv2.onrender.comgetallpost'
+      const url = 'https://blog-app-backend-6xv2.onrender.com/getallpost'
     const response = await axios.get(url,{headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}})
     setBlogs(response.data.post)
     } catch (error) {
