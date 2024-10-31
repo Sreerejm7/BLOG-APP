@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './style/Login.css'
+import './style/Register.css'
 import { ToastContainer } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import { handleSucess, handleError } from '../Toast'
@@ -46,58 +46,58 @@ const Register = () => {
          }
     }
   return (
-    <div className='container'>
+    <div className='registercontainer'>
       
-      <h1>Register</h1>
-      <form  onSubmit={handlesubmit}>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input type="text"
-          placeholder='Enter Your Name'
-          name='name'
-          onChange={handlechange}
-          value={input.name}
-          autoFocus
-           />
-          
-        </div>
-        
-        <div>
-          <label htmlFor="email">email</label>
-          <input type="email"
-          placeholder='Enter Your Email'
-          name='email'
-          onChange={handlechange}
-          value={input.email}
+    <h1>Register</h1>
+    <form className='registerform' onSubmit={handlesubmit}>
+      <div className='input'>
+        <label htmlFor="name">Name</label>
+        <input type="text"
+        placeholder='Enter Your Name'
+        name='name'
+        onChange={handlechange}
+        value={input.name}
+        autoFocus
          />
-        </div>
         
-        <div>
-          <label htmlFor="phone">Phone</label>
-          <input type="text"
-          placeholder='Enter Your Mobile Number'
-          name='phone'
-          onChange={handlechange}
-          value={input.phone}
-          />
-        </div>
-        
-        <div>
-          <label label htmlFor="password">Password</label>
-          <input type="password"
-          placeholder='Enter Your Password'
-          name='password'
-          onChange={handlechange}
-          value={input.password}
-          />
-        </div>
-        
-        <button type="submit">Register</button>
-        <span>Already have an account?<Link to='/login'>Login</Link> </span>
+      </div>
+      
+      <div className='input'>
+        <label htmlFor="email">email</label>
+        <input type="email"
+        placeholder='Enter Your Email'
+        name='email'
+        onChange={handlechange}
+        value={input.email}
+       />
+      </div>
+      
+      <div className='input'>
+        <label htmlFor="phone">Phone</label>
+        <input type="text"
+        placeholder='Enter Your Mobile Number'
+        name='phone'
+        onChange={handlechange}
+        value={input.phone}
+        />
+      </div>
+      
+      <div className='input'>
+        <label label htmlFor="password">Password</label>
+        <input type="password"
+        placeholder='Enter Your Password'
+        name='password'
+        onChange={handlechange}
+        value={input.password}
+        />
+      </div>
+      
+      <button className='register' type="submit">Register</button>
+      <span>Already have an account?<Link to='/login'>Login</Link> </span>
 
-      </form>
-      <ToastContainer/>
-    </div>
+    </form>
+    <ToastContainer/>
+  </div>
   )
 }
 
